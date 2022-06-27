@@ -82,6 +82,14 @@ export const USDC_POLYGON_MUMBAI = new Token(
   'USD//C'
 )
 
+export const USDC_FANTOM = new Token(
+  SupportedChainId.FANTOM,
+  '0x04068DA6C83AFCFA0e13ba15A6696662335D5B75',
+  6,
+  'USDC',
+  'USD//C'
+)
+
 export const AMPL = new Token(
   SupportedChainId.MAINNET,
   '0xD46bA6D942050d489DBd938a2C909A5d5039A161',
@@ -122,6 +130,7 @@ export const USDC: { [chainId in SupportedChainId]: Token } = {
   [SupportedChainId.RINKEBY]: USDC_RINKEBY,
   [SupportedChainId.KOVAN]: USDC_KOVAN,
   [SupportedChainId.ROPSTEN]: USDC_ROPSTEN,
+  [SupportedChainId.FANTOM]: USDC_OPTIMISM,
 }
 export const DAI_POLYGON = new Token(
   SupportedChainId.POLYGON,
@@ -377,5 +386,6 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in SupportedCha
     [SupportedChainId.RINKEBY]: USDC_RINKEBY.address,
     [SupportedChainId.KOVAN]: USDC_KOVAN.address,
     [SupportedChainId.ROPSTEN]: USDC_ROPSTEN.address,
+    [SupportedChainId.FANTOM]: USDC_FANTOM.address,
   },
 }

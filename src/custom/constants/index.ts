@@ -126,8 +126,8 @@ export const GAS_PRICE_UPDATE_THRESHOLD = 30 * 60 * 1000
 export const GAS_FEE_ENDPOINTS = {
   [ChainId.MAINNET]: 'https://safe-relay.gnosis.io/api/v1/gas-station/',
   // No ropsten = main
-  // [ChainId.ROPSTEN]: 'https://safe-relay.gnosis.io/api/v1/gas-station/',
-  [ChainId.RINKEBY]: 'https://safe-relay.rinkeby.gnosis.io/api/v1/gas-station/',
+  [ChainId.FANTOM]: 'https://safe-relay.gnosis.io/api/v1/gas-station/',
+  [ChainId.RINKEBY]: 'https://safe-relay.fantom.gnosis.io/api/v1/gas-station/',
   // [ChainId.GOERLI]: 'https://safe-relay.goerli.gnosis.io/api/v1/gas-station/',
   // no kovan = main
   // [ChainId.KOVAN]: 'https://safe-relay.kovan.gnosis.io/api/v1/gas-station/',
@@ -178,4 +178,6 @@ export const COW_SDK: Record<ChainId, CowSdk<ChainId>> = {
   [ChainId.MAINNET]: new CowSdk(ChainId.MAINNET, COW_SDK_OPTIONS),
   [ChainId.RINKEBY]: new CowSdk(ChainId.RINKEBY, COW_SDK_OPTIONS),
   [ChainId.GNOSIS_CHAIN]: new CowSdk(ChainId.GNOSIS_CHAIN, COW_SDK_OPTIONS),
+  [ChainId.FANTOM]: new CowSdk(ChainId.MAINNET, COW_SDK_OPTIONS),
+
 }

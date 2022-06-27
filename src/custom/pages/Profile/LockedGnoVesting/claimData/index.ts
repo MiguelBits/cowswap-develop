@@ -13,12 +13,14 @@ const indexFiles = {
   [SupportedChainId.MAINNET]: mainnetIndex,
   [SupportedChainId.RINKEBY]: rinkebyIndex,
   [SupportedChainId.GNOSIS_CHAIN]: gnosisChainIndex,
+  [SupportedChainId.FANTOM]: mainnetIndex,
 }
 
 const chainNames = {
   [SupportedChainId.MAINNET]: 'mainnet',
   [SupportedChainId.RINKEBY]: 'rinkeby',
   [SupportedChainId.GNOSIS_CHAIN]: 'gnosisChain',
+  [SupportedChainId.FANTOM]: 'fantom',
 }
 
 const DISTRO_REPO_BRANCH_NAME = 'main'

@@ -117,10 +117,19 @@ const GNO_RINKEBY = new Token(
   'Gnosis'
 )
 
+const GNO_FANTOM = new Token(
+  SupportedChainId.RINKEBY,
+  '0xd0dab4e640d95e9e8a47545598c33e31bdb53c7c',
+  18,
+  'GNO',
+  'Gnosis'
+)
+
 export const GNO: Record<SupportedChainId, Token> = {
   [SupportedChainId.MAINNET]: GNO_MAINNET,
   [SupportedChainId.GNOSIS_CHAIN]: GNO_GNOSIS_CHAIN,
   [SupportedChainId.RINKEBY]: GNO_RINKEBY,
+  [SupportedChainId.FANTOM]: GNO_FANTOM,
 }
 
 export const ADDRESS_IMAGE_OVERRIDE = {

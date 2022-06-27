@@ -166,4 +166,16 @@ export const CHAIN_INFO: ChainInfoMap = {
     logoUrl: polygonMaticLogo,
     nativeCurrency: { name: 'Polygon Mumbai Matic', symbol: 'mMATIC', decimals: 18 },
   },
+  [SupportedChainId.FANTOM]: {
+    networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms`10m`,
+    bridge: 'https://wallet.fantom.network/bridge',
+    docs: 'https://fantom.foundation/',
+    explorer: 'https://fantomscan.io/',
+    infoLink: 'https://info.uniswap.org/#/fantom/',
+    label: 'Fantom',
+    logoUrl: polygonMaticLogo,
+    nativeCurrency: { name: 'Polygon Mumbai Matic', symbol: 'mMATIC', decimals: 18 },
+  },
+  
 }

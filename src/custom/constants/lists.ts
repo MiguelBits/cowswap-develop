@@ -32,7 +32,7 @@ const HONEY_SWAP_XDAI = 'https://tokens.honeyswap.org'
 
 export const UNSUPPORTED_LIST_URLS: NetworkLists = {
   [ChainId.MAINNET]: [BA_LIST],
-  // [ChainId.KOVAN]: [BA_LIST],
+  [ChainId.FANTOM]: [BA_LIST],
   [ChainId.RINKEBY]: [BA_LIST],
   // [ChainId.ROPSTEN]: [BA_LIST],
   // [ChainId.GOERLI]: [BA_LIST],
@@ -65,10 +65,10 @@ export const DEFAULT_LIST_OF_LISTS_BY_NETWORK: NetworkLists = {
       COW_DAO_LIST,
     ],
   }),
-  // [ChainId.KOVAN]: buildNetworkDefaultLists({
-  //   chainId: ChainId.KOVAN,
-  //   networkLists: [COMPOUND_LIST],
-  // }),
+   [ChainId.FANTOM]: buildNetworkDefaultLists({
+    chainId: ChainId.FANTOM,
+     networkLists: [COMPOUND_LIST],
+   }),
   [ChainId.RINKEBY]: buildNetworkDefaultLists({
     chainId: ChainId.RINKEBY,
     networkLists: [RINKEBY_LIST, COMPOUND_LIST],
@@ -90,7 +90,7 @@ export const DEFAULT_LIST_OF_LISTS_BY_NETWORK: NetworkLists = {
 // default lists to be 'active' aka searched across
 export const DEFAULT_ACTIVE_LIST_URLS_BY_NETWORK: NetworkLists = {
   [ChainId.MAINNET]: [COW_DAO_LIST, GEMINI_LIST],
-  // [ChainId.KOVAN]: [GEMINI_LIST],
+  [ChainId.FANTOM]: [GEMINI_LIST],
   [ChainId.RINKEBY]: [COW_DAO_LIST, RINKEBY_LIST],
   // [ChainId.ROPSTEN]: [GEMINI_LIST],
   [ChainId.GNOSIS_CHAIN]: [COW_DAO_LIST, HONEY_SWAP_XDAI],
