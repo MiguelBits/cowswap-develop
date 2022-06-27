@@ -130,7 +130,7 @@ export const USDC: { [chainId in SupportedChainId]: Token } = {
   [SupportedChainId.RINKEBY]: USDC_RINKEBY,
   [SupportedChainId.KOVAN]: USDC_KOVAN,
   [SupportedChainId.ROPSTEN]: USDC_ROPSTEN,
-  [SupportedChainId.FANTOM]: USDC_OPTIMISM,
+  [SupportedChainId.FANTOM]: USDC_FANTOM,
 }
 export const DAI_POLYGON = new Token(
   SupportedChainId.POLYGON,
@@ -146,8 +146,22 @@ export const USDT_POLYGON = new Token(
   'USDT',
   'Tether USD'
 )
+export const USDT_FANTOM = new Token(
+  SupportedChainId.FANTOM,
+  '0x1B27A9dE6a775F98aaA5B90B62a4e2A0B84DbDd9',
+  18,
+  'USDT',
+  'Tether USD'
+)
 export const WBTC_POLYGON = new Token(
   SupportedChainId.POLYGON,
+  '0x1e1fdb53451C5262A5ba449271789C7F551a9142',
+  8,
+  'WBTC',
+  'Wrapped BTC'
+)
+export const WBTC_FANTOM= new Token(
+  SupportedChainId.FANTOM,
   '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6',
   8,
   'WBTC',
@@ -216,6 +230,13 @@ export const FRAX = new Token(
   'FRAX',
   'Frax'
 )
+export const DAI_FANTOM = new Token(
+  SupportedChainId.FANTOM,
+  '0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E',
+  18,
+  'DAI',
+  'DAI'
+)
 export const FXS = new Token(
   SupportedChainId.MAINNET,
   '0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0',
@@ -273,12 +294,20 @@ export const WETH_POLYGON = new Token(
   'WETH',
   'Wrapped Ether'
 )
+export const WETH_FANTOM = new Token(
+  SupportedChainId.FANTOM,
+  '0x74b23882a30290451A17c44f4F05243b6b58C76d',
+  18,
+  'WETH',
+  'Wrapped Ether'
+)
 export const UNI: { [chainId: number]: Token } = {
   [SupportedChainId.MAINNET]: new Token(SupportedChainId.MAINNET, UNI_ADDRESS[1], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.RINKEBY]: new Token(SupportedChainId.RINKEBY, UNI_ADDRESS[4], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.ROPSTEN]: new Token(SupportedChainId.ROPSTEN, UNI_ADDRESS[3], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.GOERLI]: new Token(SupportedChainId.GOERLI, UNI_ADDRESS[5], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.KOVAN]: new Token(SupportedChainId.KOVAN, UNI_ADDRESS[42], 18, 'UNI', 'Uniswap'),
+  [SupportedChainId.FANTOM]: new Token(SupportedChainId.FANTOM, UNI_ADDRESS[3], 18, 'UNI', 'Uniswap'),
 }
 
 export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } = {
@@ -324,6 +353,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     18,
     'WMATIC',
     'Wrapped MATIC'
+  ),
+  [SupportedChainId.FANTOM]: new Token(
+    SupportedChainId.FANTOM,
+    '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83',
+    18,
+    'WFANTOM',
+    'Wrapped FANTOM'
   ),
 }
 

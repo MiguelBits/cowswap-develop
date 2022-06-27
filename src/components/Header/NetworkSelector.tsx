@@ -148,6 +148,7 @@ const BridgeLabel = ({ chainId }: { chainId: SupportedChainId }) => {
     case SupportedChainId.OPTIMISTIC_KOVAN:
       return <Trans>Optimism Gateway</Trans>
     case SupportedChainId.POLYGON:
+    case SupportedChainId.FANTOM:
     case SupportedChainId.POLYGON_MUMBAI:
       return <Trans>Polygon Bridge</Trans>
     default:
@@ -163,6 +164,7 @@ const ExplorerLabel = ({ chainId }: { chainId: SupportedChainId }) => {
     case SupportedChainId.OPTIMISTIC_KOVAN:
       return <Trans>Optimistic Etherscan</Trans>
     case SupportedChainId.POLYGON:
+    case SupportedChainId.FANTOM:
     case SupportedChainId.POLYGON_MUMBAI:
       return <Trans>Polygonscan</Trans>
     default:
@@ -324,6 +326,7 @@ export default function NetworkSelector() {
             <Row onSelectChain={handleChainSwitch} targetChain={SupportedChainId.POLYGON} />
             <Row onSelectChain={handleChainSwitch} targetChain={SupportedChainId.OPTIMISM} />
             <Row onSelectChain={handleChainSwitch} targetChain={SupportedChainId.ARBITRUM_ONE} />
+            <Row onSelectChain={handleChainSwitch} targetChain={SupportedChainId.FANTOM} />
           </FlyoutMenuContents>
         </FlyoutMenu>
       )}
